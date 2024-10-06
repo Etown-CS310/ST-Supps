@@ -146,3 +146,9 @@ footer ul li a {
     text-decoration: none;
 }
 
+.product-logo {
+    display: block;
+    margin: 50px auto;
+    width: 600px; /* Adjust size */
+    height: auto;
+}
