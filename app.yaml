@@ -1,9 +1,14 @@
 runtime: nodejs20
 
-service: default
-env: standard
-
 handlers:
 - url: /
   static_files: index.html
   upload: index.html
+
+- url: /styles.css
+  static_files: styles.css
+  upload: styles.css
+
+- url: /images/(.*)
+  static_files: images/\1
+  upload: images/(.*)
