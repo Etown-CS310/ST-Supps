@@ -3,14 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="styles.css" rel="stylesheet">
-    <title>About us</title>
+    <title>About Us - ST-Supps</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
 
+    <style>
+        /* General styling for the container */
+        .about-us-container {
+            display: flex;
+            flex-direction: column;
+            gap: 40px; /* Space between Ian and Tyler sections */
+            padding-top: 100px;
+            
+        }
+
+        /* Flex container for each individual */
+        .about-us-section {
+            display: flex;
+            align-items: flex-end;
+            gap: 20px; /* Space between image and text */
+        }
+
+        /* Styling for images */
+        .about-us-section img {
+            width: 150px; /* Adjust the width of the images */
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Styling for the text section */
+        .about-us-section .about-text {
+            flex: 1;
+        }
+    </style>
 </head>
 <body>
-    <p>This page is about us</p>
-    
 
-    <a href="index.html">Back</a>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>ST-Supps</h1>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#products">Products</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="about-us">
+        <h2>About Tyler and Ian</h2>
+        
+        <!-- Container for Ian -->
+        <div class="about-us-container">
+            <div class="about-us-section">
+                <img src="images/ian.jpg" alt="Ian Skeete"> <!-- Ian's picture -->
+                <div class="about-text">
+                    <h3>Ian's Journey</h3>
+                    <p>Ian’s fitness journey has been built on years of lifting, training, and experimenting with various diets to enhance performance. With an extensive background in both physical training and understanding the science of nutrition, Ian has fine-tuned his approach to achieving the best results in and out of the gym.</p>
+                    <p>From bulking and cutting cycles to high-intensity workouts, Ian is passionate about pushing boundaries and sharing that knowledge with the community. His dedication to strength and health is what drives ST-Supps to provide top-notch supplements for recovery, strength, and energy.</p>
+                </div>
+            </div>
+
+            <!-- Container for Tyler -->
+            <div class="about-us-section">
+                <img src="images/tyler.jpg" alt="Tyler"> <!-- Tyler's picture -->
+                <div class="about-text">
+                    <h3>Tyler's Journey</h3>
+                    <p>Tyler’s love for fitness started early on. From high school sports to serious weightlifting, Tyler has always had a commitment to health and athleticism. With a deep knowledge of nutrition and training, Tyler has pushed his limits to constantly improve and has learned the value of balance between strength training and proper fueling.</p>
+                    <p>Now, Tyler shares his experience with others, focusing on building strength, endurance, and muscle growth through both training and proper supplementation. His goal is to help athletes of all levels reach their true potential.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 ST-Supps. All rights reserved.</p>
+        <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+        </ul>
+    </footer>
+
 </body>
 </html>
