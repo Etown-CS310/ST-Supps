@@ -13,26 +13,68 @@
             flex-direction: column;
             gap: 40px; /* Space between Ian and Tyler sections */
             padding-top: 100px;
-            
+            padding-left: 20px;
+            padding-right: 20px;
         }
 
         /* Flex container for each individual */
         .about-us-section {
             display: flex;
-            align-items: flex-end;
+            align-items: center;
             gap: 20px; /* Space between image and text */
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        /* Add hover effect for interaction */
+        .about-us-section:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         /* Styling for images */
         .about-us-section img {
-            width: 150px; /* Adjust the width of the images */
+            width: 180px; /* Adjust the width of the images */
             height: auto;
-            border-radius: 8px;
+            border-radius: 50%;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* Image hover effect */
+        .about-us-section img:hover {
+            transform: scale(1.1);
         }
 
         /* Styling for the text section */
         .about-us-section .about-text {
             flex: 1;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s;
+        }
+
+        /* Text hover effect */
+        .about-us-section:hover .about-text {
+            background-color: #fff;
+        }
+
+        /* Section title styling */
+        h2 {
+            text-align: center;
+            font-size: 2em;
+            color: #333;
+        }
+
+        h3 {
+            font-size: 1.5em;
+            color: #333;
+            margin-top: 0;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #555;
         }
     </style>
 </head>
@@ -58,7 +100,7 @@
         <!-- Container for Ian -->
         <div class="about-us-container">
             <div class="about-us-section">
-                <img src="images/ian.jpg" alt="Ian Skeete"> <!-- Ian's picture -->
+                <img src="images/iskeete.JPG" alt="Ian Skeete"> <!-- Ian's picture -->
                 <div class="about-text">
                     <h3>Ian's Journey</h3>
                     <p>Ian’s fitness journey has been built on years of lifting, training, and experimenting with various diets to enhance performance. With an extensive background in both physical training and understanding the science of nutrition, Ian has fine-tuned his approach to achieving the best results in and out of the gym.</p>
