@@ -246,20 +246,168 @@
         </div>
 
         <!-- Ryse Loaded Pre -->
-        <div class="product">
-            <img src="images/ryseloaded.jpg" alt="Ryse Loaded Pre">
-            <h3>Ryse Loaded Pre</h3>
-            <div class="product-info">
-                <p>Flavor: Freedom Rocks</p>
-                <p>30 Servings</p>
-            </div>
-            <ul>
-                <li>High Stim Pre-Workout</li>
-                <li>Enhanced Energy Formula</li>
-                <li>Natural & Artificial Flavors</li>
-            </ul>
-            <button class="btn">Add to Cart</button>
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            max-width: 400px;
+            margin: 20px auto;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .product-image {
+            width: 80%;
+            margin: 0 auto 20px;
+        }
+
+        .product-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .product-info {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .product-features {
+            text-align: left;
+            color: #666;
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+
+        .compare-prices-btn {
+            background-color: #f26925;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        .compare-prices-btn:hover {
+            background-color: #e55814;
+        }
+
+        .retailer-list {
+            display: none;
+            margin-top: 15px;
+        }
+
+        .retailer-list.show {
+            display: block;
+        }
+
+        .retailer-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            margin-bottom: 8px;
+            text-decoration: none;
+            color: inherit;
+            background: white;
+            transition: transform 0.2s ease;
+        }
+
+        .retailer-item:hover {
+            transform: translateX(5px);
+        }
+
+        .retailer-name {
+            font-weight: bold;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .price {
+            color: #f26925;
+            font-weight: bold;
+            font-size: 18px;
+            margin-right: 10px;
+        }
+
+        .stock-status {
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .in-stock {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        .out-of-stock {
+            background-color: #ffebee;
+            color: #c62828;
+        }
+    </style>
+
+    <script>
+        function togglePrices(productId) {
+            const retailerList = document.getElementById(`${productId}-retailers`);
+            retailerList.classList.toggle('show');
+            
+            const button = document.querySelector('.compare-prices-btn');
+            button.textContent = retailerList.classList.contains('show') ? 'Hide Prices' : 'Compare Prices';
+        }
+    </script>
+</head>
+<body>
+    <div class="product-card">
+        <img src="images/ryseloaded.jpg" alt="Ryse Loaded Pre" class="product-image">
+        <h2 class="product-title">Ryse Loaded Pre</h2>
+        <div class="product-info">
+            <p>Flavor: Freedom Rocks</p>
+            <p>30 Servings</p>
         </div>
+        <ul class="product-features">
+            <li>High Stim Pre-Workout</li>
+            <li>Enhanced Energy Formula</li>
+            <li>Natural & Artificial Flavors</li>
+        </ul>
+        <button class="compare-prices-btn" onclick="togglePrices('ryse-loaded')">Compare Prices</button>
+        
+        <div id="ryse-loaded-retailers" class="retailer-list">
+            <a href="https://www.amazon.com/RYSE-Up-Supplements-Supplement-Citrulline/dp/B09J9CJ4QB/ref=sr_1_1?dib=eyJ2IjoiMSJ9._mFjy3TfHYcQGzcXDSoaMf0va1Um0Nq1my5e4sIp8RiCDfu7iVZuwyV16kvFJk7s55dSqll-xgSCIN-qIWpH-q0m7NGbIykSuR5v4n9ZRgepr8nEf7D_0K67j1XlxtB-UE-NrG4ZxvctftTXAZiaW_H7RLi88gSgj5UZy6bHgxIdQJ8eJbQHgh0rIBWy3vCEzsksXj4iRjKIDohzNAYaXZhquX__wSVMp2K0-6k3-AMVnP3u5RD5zJfcXeJowuzTnzm4i-FuAGXL2kb7g26_yx3FD8eFtAacops7444GMGk.3u6YKc_BjAyYL2-Gp40U9hUP8KSb28SZbLamRkFpv_o&dib_tag=se&keywords=ryse+loaded+preworkout&qid=1731344562&sr=8-1" class="retailer-item" target="_blank">
+                <span class="retailer-name">Amazon</span>
+                <div>
+                    <span class="price">$37.99</span>
+                    <span class="stock-status in-stock">In Stock</span>
+                </div>
+            </a>
+            <a href="https://www.vitaminshoppe.com/p/ultra-pre-freedom-rocks-11-1-oz-powder/rys0010" class="retailer-item" target="_blank">
+                <span class="retailer-name">Vitamin Shoppe</span>
+                <div>
+                    <span class="price">$44.99</span>
+                    <span class="stock-status in-stock">In Stock</span>
+                </div>
+            </a>
+            <a href="https://www.gnc.com/pre-workout-supplements/556513.html?ogmap=SHP%7CBR%7CGOOG%7CSTND%7Cc%7CSITEWIDE%7C%7C%7BG_Shopping_BR%7D%7C%7Badgroup%7D%7C%7C9279358699%7C93587336549&gad_source=1&gclid=Cj0KCQiA88a5BhDPARIsAFj595iqEgBcxmzevzXaeGL8rAVsxUIYuIJQcslNuVUmpn4RLV6ETCdu1GEaAnf3EALw_wcB&gclsrc=aw.ds" class="retailer-item" target="_blank">
+                <span class="retailer-name">GNC</span>
+                <div>
+                    <span class="price">$44.99</span>
+                    <span class="stock-status in-stock">In Stock</span>
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
 
          <!-- Gold Standard Pre-Workout -->
         <div class="product">
