@@ -1,0 +1,22 @@
+{
+    "name": "login_in",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "bcryptjs": "^2.4.3",
+      "cookie-parser": "^1.4.7",
+      "express": "^4.21.1",
+      "jsonwebtoken": "^9.0.2",
+      "multer": "^1.4.5-lts.1",
+      "nodemon": "^3.1.7",
+      "sqlite": "^5.1.1",
+      "sqlite3": "^5.1.7"
+    }
+  }
+  
