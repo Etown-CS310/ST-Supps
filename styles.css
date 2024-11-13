@@ -315,3 +315,11 @@ footer ul li a {
         grid-column: auto;
     }
 }
+.history-btn {
+    background: #f0f0f0;
+    border: none;
+    padding: 8px 16px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
