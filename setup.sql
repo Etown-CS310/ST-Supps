@@ -1,6 +1,5 @@
 CREATE TABLE users(
    id             INTEGER PRIMARY KEY AUTOINCREMENT,
-   name           TEXT NOT NULL,
-   email          TEXT NOT NULL UNIQUE,
-   message        TEXT
+   uname           TEXT UNIQUE,
+   password          TEXT
 );

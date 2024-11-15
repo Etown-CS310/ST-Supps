@@ -116,6 +116,7 @@ nav ul li a {
 }
 
 .btn {
+    margin-top: 10px;
     padding: 10px 20px;
     background-color: #ff6600;
     color: white;

@@ -23,7 +23,7 @@
     </header>
 
     <div class="login-container">
-        <form action="dashboard.html" method="post">
+        <form id="loginForm">
             <div class="form-group">
                 <label for="uname">Username:</label>
                 <input type="text" id="uname" name="uname" required>
@@ -32,9 +32,66 @@
                 <label for="pwd">Password:</label>
                 <input type="password" id="pwd" name="pwd" required>
             </div>
-            <button type="submit" class="btn">Login</button>
+            <button type="button" class="btn" onclick="registerUser()">Register</button>
+            <button type="button" class="btn" onclick="loginUser()">Login</button>
         </form>
     </div>
+
+    <script>
+
+                // Login function
+                async function loginUser() {
+                    const uname = document.getElementById("uname").value;
+                    const password = document.getElementById("pwd").value;
+        
+                    try {
+                        const response = await fetch("/login", {
+                            method: "POST",
+                            headers: {
+                                "Content-Type": "application/json"
+                            },
+                            body: JSON.stringify({ uname, password })
+                        });
+        
+                        const result = await response.json();
+        
+                        if (response.ok) {
+                            // Assuming successful login
+                            alert("Login successful!");
+                            // Redirect to index.html after successful login
+                            window.location.href = "index.html";
+                        } else {
+                            alert(result.message || "Login failed!");
+                        }
+                    } catch (error) {
+                        console.error("Error:", error);
+                        alert("An error occurred during login.");
+                    }
+                }
+        
+                // Register function
+                async function registerUser() {
+                    const uname = document.getElementById("uname").value;
+                    const pwd = document.getElementById("pwd").value;
+        
+                    const response = await fetch("/register", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify({ uname, password: pwd })
+                    });
+        
+                    const result = await response.json();
+        
+                    if (response.ok) {
+                        alert("Registration successful! You can now log in.");
+                    } else {
+                        alert(result.message || "Registration failed.");
+                    }
+                }
+
+    </script>
 
     <footer>
         <p>&copy; 2024 ST-Supps. All rights reserved.</p>
