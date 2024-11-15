@@ -29,7 +29,7 @@ async function getDBConnection() {
     });
 }
 
-// Endpoint: Register a new account
+// Register a new account
 app.post("/register", async (req, res) => {
     const { uname, password } = req.body;
 
@@ -52,7 +52,7 @@ app.post("/register", async (req, res) => {
     res.status(201).json({ message: "Registration successful" });
 });
 
-// Endpoint: User login
+// User login
 app.post("/login", async (req, res) => {
     const { uname, password } = req.body;
     if (!uname || !password) {
@@ -77,7 +77,7 @@ app.post("/login", async (req, res) => {
     res.status(200).json({ message: "Login successful", redirectUrl: "/index.html" });
 });
 
-// Endpoint: Access user area
+// Access user area
 app.get("/user", (req, res) => {
     const token = req.cookies.jwt;
 
