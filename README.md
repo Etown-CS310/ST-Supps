@@ -1,4 +1,4 @@
-![Firebase](https://img.shields.io/badge/Sqlite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
+![sqlite](https://img.shields.io/badge/Sqlite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
 
 # ST-Supps
 Creating a sports supplement website that helps customers find supplements through various different stores. The goal is to help customers find products that are cheap and where they are be sold at. Our website will be a linking host website that link products from different stores. 
