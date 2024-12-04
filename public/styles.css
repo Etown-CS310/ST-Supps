@@ -324,3 +324,14 @@ footer ul li a {
     border-radius: 4px;
     cursor: pointer;
 }
+.retailer-logo {
+    max-width: 200px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.retailer-logo:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+    cursor: pointer;
+}
