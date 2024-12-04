@@ -335,3 +335,12 @@ footer ul li a {
     opacity: 0.8;
     cursor: pointer;
 }
+.product-image {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.product-image:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+    cursor: pointer;
+}
