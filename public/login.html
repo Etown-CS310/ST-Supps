@@ -39,58 +39,32 @@
 
     <script>
 
-                // Login function
-                async function loginUser() {
-                    const uname = document.getElementById("uname").value;
-                    const password = document.getElementById("pwd").value;
+        async function registerUser() {
+            const uname = document.getElementById("uname").value;
+            const password = document.getElementById("pwd").value; // Corrected key name
         
-                    try {
-                        const response = await fetch("/login", {
-                            method: "POST",
-                            headers: {
-                                "Content-Type": "application/json"
-                            },
-                            body: JSON.stringify({ uname, password })
-                        });
+            try {
+                const response = await fetch("/register", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({ uname, password }) // Ensure the key matches server expectations
+                });
         
-                        const result = await response.json();
+                const result = await response.json();
         
-                        if (response.ok) {
-                            // Assuming successful login
-                            alert("Login successful!");
-                            // Redirect to index.html after successful login
-                            window.location.href = "index.html";
-                        } else {
-                            alert(result.message || "Login failed!");
-                        }
-                    } catch (error) {
-                        console.error("Error:", error);
-                        alert("An error occurred during login.");
-                    }
+                if (response.ok) {
+                    alert("Registration successful! You can now log in.");
+                } else {
+                    alert(result.message || "Registration failed.");
                 }
+            } catch (error) {
+                console.error("Error:", error);
+                alert("An error occurred during registration.");
+            }
+        }
         
-                // Register function
-                async function registerUser() {
-                    const uname = document.getElementById("uname").value;
-                    const pwd = document.getElementById("pwd").value;
-        
-                    const response = await fetch("/register", {
-                        method: "POST",
-                        headers: {
-                            "Content-Type": "application/json"
-                        },
-                        body: JSON.stringify({ uname, password: pwd })
-                    });
-        
-                    const result = await response.json();
-        
-                    if (response.ok) {
-                        alert("Registration successful! You can now log in.");
-                    } else {
-                        alert(result.message || "Registration failed.");
-                    }
-                }
-
     </script>
 
     <footer>
