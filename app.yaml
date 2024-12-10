@@ -9,6 +9,10 @@ handlers:
   static_files: public/styles.css
   upload: public/styles.css
 
+- url: /styles2.css
+  static_files: public/styles2.css
+  upload: public/styles2.css
+
 - url: /images/(.*)
   static_files: public/images/\1
   upload: public/images/(.*)
