@@ -38,22 +38,22 @@
     </div>
 
     <script>
-
+        // Function for user registration
         async function registerUser() {
             const uname = document.getElementById("uname").value;
-            const password = document.getElementById("pwd").value; // Corrected key name
-        
+            const password = document.getElementById("pwd").value;
+
             try {
                 const response = await fetch("/register", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
                     },
-                    body: JSON.stringify({ uname, password }) // Ensure the key matches server expectations
+                    body: JSON.stringify({ uname, password })
                 });
-        
+
                 const result = await response.json();
-        
+
                 if (response.ok) {
                     alert("Registration successful! You can now log in.");
                 } else {
@@ -64,7 +64,34 @@
                 alert("An error occurred during registration.");
             }
         }
-        
+
+        // Function for user login
+        async function loginUser() {
+            const uname = document.getElementById("uname").value;
+            const password = document.getElementById("pwd").value;
+
+            try {
+                const response = await fetch("/login", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({ uname, password })
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    alert("Login successful!");
+                    window.location.href = result.redirectUrl; // Redirect to the user area or homepage
+                } else {
+                    alert(result.message || "Login failed.");
+                }
+            } catch (error) {
+                console.error("Error:", error);
+                alert("An error occurred during login.");
+            }
+        }
     </script>
 
     <footer>
