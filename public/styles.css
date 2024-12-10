@@ -39,6 +39,76 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
 }
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    /* color: #e0e0e0; */
+}
+
+body.dark-mode header {
+    background-color: #1f1f1f;
+}
+body.dark-mode #about{
+    background-color: #121212;;
+    color: #e0e0e0;
+}  
+body.dark-mode #contact{
+    background-color: #121212;;
+    color: #e0e0e0;
+}  
+
+
+body.dark-mode nav ul li a {
+    color: #e0e0e0;
+}
+
+body.dark-mode .login-container form {
+    background-color: #2c2c2c;
+    box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .login-container label {
+    color: #e0e0e0;
+}
+
+body.dark-mode .login-container input {
+    background-color: #3c3c3c;
+    color: #e0e0e0;
+    border-color: #555;
+}
+
+body.dark-mode .btn {
+    background-color: #ff8533;
+}
+
+body.dark-mode .btn:hover {
+    background-color: #ff9d5c;
+}
+
+body.dark-mode .product {
+    background-color: #2c2c2c;
+    color: #e0e0e0;
+}
+
+body.dark-mode footer {
+    background-color: #1f1f1f;
+}
+
+body.dark-mode .hero {
+    background-color: #1a1a1a;
+}
+
+#dark-mode-toggle {
+    color: #e0e0e0;
+    position: fixed;
+    top: 75px;
+    right: 100px; 
+    z-index: 1000;
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
 .login-container {
     margin: auto;
     padding-top: 150px; /* Adjusted for header */
