@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="styles2.css">
     <script src="dark-mode.js"></script>
+    <script src="starRating.js"></script>
+    <link rel="stylesheet" href="rating.css">
 </head>
 <body>
     <header>
@@ -37,6 +39,16 @@
                     <li>Enhanced Energy Formula</li>
                     <li>Natural & Artificial Flavors</li>
                 </ul>
+                <div class="rating-container">
+                    <div class="product-stars" id="stars-ryse-loaded">
+                        <span class="product-star" onclick="rateProduct('ryse-loaded', 1)">★</span>
+                        <span class="product-star" onclick="rateProduct('ryse-loaded', 2)">★</span>
+                        <span class="product-star" onclick="rateProduct('ryse-loaded', 3)">★</span>
+                        <span class="product-star" onclick="rateProduct('ryse-loaded', 4)">★</span>
+                        <span class="product-star" onclick="rateProduct('ryse-loaded', 5)">★</span>
+                    </div>
+                    <div id="rating-display-ryse-loaded">No ratings yet</div>
+                </div>
                 <button class="compare-prices-btn" onclick="togglePrices('ryse-loaded')">Compare Prices</button>
                 
                 <div id="ryse-loaded-retailers" class="retailer-list">
@@ -75,6 +87,16 @@
                     <li>Muscular Endurance + Pump</li>
                     <li>Advanced Peptides</li>
                 </ul>
+                <div class="rating-container">
+                    <div class="product-stars" id="stars-c4-original">
+                        <span class="product-star" onclick="rateProduct('c4-original', 1)">★</span>
+                        <span class="product-star" onclick="rateProduct('c4-original', 2)">★</span>
+                        <span class="product-star" onclick="rateProduct('c4-original', 3)">★</span>
+                        <span class="product-star" onclick="rateProduct('c4-original', 4)">★</span>
+                        <span class="product-star" onclick="rateProduct('c4-original', 5)">★</span>
+                    </div>
+                    <div id="rating-display-c4-original">No ratings yet</div>
+                </div>
                 <button class="compare-prices-btn" onclick="togglePrices('c4-original')">Compare Prices</button>
                 
                 <div id="c4-original-retailers" class="retailer-list">
@@ -113,6 +135,16 @@
                     <li>3g Creatine Monohydrate</li>
                     <li>1.5g Beta-Alanine</li>
                 </ul>
+                <div class="rating-container">
+                    <div class="product-stars" id="stars-gold-standard">
+                        <span class="product-star" onclick="rateProduct('gold-standard', 1)">★</span>
+                        <span class="product-star" onclick="rateProduct('gold-standard', 2)">★</span>
+                        <span class="product-star" onclick="rateProduct('gold-standard', 3)">★</span>
+                        <span class="product-star" onclick="rateProduct('gold-standard', 4)">★</span>
+                        <span class="product-star" onclick="rateProduct('gold-standard', 5)">★</span>
+                    </div>
+                    <div id="rating-display-gold-standard">No ratings yet</div>
+                </div>
                 <button class="compare-prices-btn" onclick="togglePrices('gold-standard')">Compare Prices</button>
                 
                 <div id="gold-standard-retailers" class="retailer-list">
@@ -151,6 +183,16 @@
                     <li>Enhanced Performance</li>
                     <li>Natural & Artificial Flavors</li>
                 </ul>
+                <div class="rating-container">
+                    <div class="product-stars" id="stars-bum-essential">
+                        <span class="product-star" onclick="rateProduct('bum-essential', 1)">★</span>
+                        <span class="product-star" onclick="rateProduct('bum-essential', 2)">★</span>
+                        <span class="product-star" onclick="rateProduct('bum-essential', 3)">★</span>
+                        <span class="product-star" onclick="rateProduct('bum-essential', 4)">★</span>
+                        <span class="product-star" onclick="rateProduct('bum-essential', 5)">★</span>
+                    </div>
+                    <div id="rating-display-bum-essential">No ratings yet</div>
+                </div>
                 <button class="compare-prices-btn" onclick="togglePrices('bum-essential')">Compare Prices</button>
                 
                 <div id="bum-essential-retailers" class="retailer-list">
@@ -189,6 +231,16 @@
                     <li>Premium Pre-Workout Formula</li>
                     <li>Natural & Artificial Flavors</li>
                 </ul>
+                <div class="rating-container">
+                    <div class="product-stars" id="stars-ghost-legend">
+                        <span class="product-star" onclick="rateProduct('ghost-legend', 1)">★</span>
+                        <span class="product-star" onclick="rateProduct('ghost-legend', 2)">★</span>
+                        <span class="product-star" onclick="rateProduct('ghost-legend', 3)">★</span>
+                        <span class="product-star" onclick="rateProduct('ghost-legend', 4)">★</span>
+                        <span class="product-star" onclick="rateProduct('ghost-legend', 5)">★</span>
+                    </div>
+                    <div id="rating-display-ghost-legend">No ratings yet</div>
+                </div>
                 <button class="compare-prices-btn" onclick="togglePrices('ghost-legend')">Compare Prices</button>
                 
                 <div id="ghost-legend-retailers" class="retailer-list">
@@ -227,6 +279,16 @@
                     <li>Intense Focus & Drive</li>
                     <li>Increases Power & Endurance</li>
                 </ul>
+                <div class="rating-container">
+                    <div class="product-stars" id="stars-gorilla-mode">
+                        <span class="product-star" onclick="rateProduct('gorilla-mode', 1)">★</span>
+                        <span class="product-star" onclick="rateProduct('gorilla-mode', 2)">★</span>
+                        <span class="product-star" onclick="rateProduct('gorilla-mode', 3)">★</span>
+                        <span class="product-star" onclick="rateProduct('gorilla-mode', 4)">★</span>
+                        <span class="product-star" onclick="rateProduct('gorilla-mode', 5)">★</span>
+                    </div>
+                    <div id="rating-display-gorilla-mode">No ratings yet</div>
+                </div>
                 <button class="compare-prices-btn" onclick="togglePrices('gorilla-mode')">Compare Prices</button>
                 
                 <div id="gorilla-mode-retailers" class="retailer-list">

@@ -6,6 +6,7 @@
     max-width: 400px;
     margin: 20px auto;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
 }
 
 .product-image {
@@ -102,4 +103,12 @@
 .out-of-stock {
     background-color: #ffebee;
     color: #c62828;
+}
+.product-card {
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
