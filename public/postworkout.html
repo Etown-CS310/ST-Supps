@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="styles2.css">
     <script src="dark-mode.js"></script>
+    <script src="starRating.js"></script>
+    <link rel="stylesheet" href="rating.css">
 </head>
 <body>
     <header>
@@ -40,6 +42,16 @@
                         <li>Digestive Enzyme Blend</li>
                         <li>Limited Edition Flavor</li>
                     </ul>
+                    <div class="rating-container">
+                        <div class="product-stars" id="stars-farm-fed">
+                            <span class="product-star" onclick="rateProduct('farm-fed', 1)">★</span>
+                            <span class="product-star" onclick="rateProduct('farm-fed', 2)">★</span>
+                            <span class="product-star" onclick="rateProduct('farm-fed', 3)">★</span>
+                            <span class="product-star" onclick="rateProduct('farm-fed', 4)">★</span>
+                            <span class="product-star" onclick="rateProduct('farm-fed', 5)">★</span>
+                        </div>
+                        <div id="rating-display-farm-fed">No ratings yet</div>
+                    </div>
                     <button class="compare-prices-btn" onclick="togglePrices('farm-fed')">Compare Prices</button>
                     
                     <div id="farm-fed-retailers" class="retailer-list">
@@ -80,6 +92,16 @@
                         <li>5.5g BCAAs</li>
                         <li>100% Whey Protein Isolate</li>
                     </ul>
+                    <div class="rating-container">
+                        <div class="product-stars" id="stars-iso100">
+                            <span class="product-star" onclick="rateProduct('iso100', 1)">★</span>
+                            <span class="product-star" onclick="rateProduct('iso100', 2)">★</span>
+                            <span class="product-star" onclick="rateProduct('iso100', 3)">★</span>
+                            <span class="product-star" onclick="rateProduct('iso100', 4)">★</span>
+                            <span class="product-star" onclick="rateProduct('iso100', 5)">★</span>
+                        </div>
+                        <div id="rating-display-iso100">No ratings yet</div>
+                    </div>
                     <button class="compare-prices-btn" onclick="togglePrices('iso100')">Compare Prices</button>
                     
                     <div id="iso100-retailers" class="retailer-list">
@@ -120,6 +142,16 @@
                         <li>Low Sugar Formula</li>
                         <li>130 Calories Per Serving</li>
                     </ul>
+                    <div class="rating-container">
+                        <div class="product-stars" id="stars-mre-lite">
+                            <span class="product-star" onclick="rateProduct('mre-lite', 1)">★</span>
+                            <span class="product-star" onclick="rateProduct('mre-lite', 2)">★</span>
+                            <span class="product-star" onclick="rateProduct('mre-lite', 3)">★</span>
+                            <span class="product-star" onclick="rateProduct('mre-lite', 4)">★</span>
+                            <span class="product-star" onclick="rateProduct('mre-lite', 5)">★</span>
+                        </div>
+                        <div id="rating-display-mre-lite">No ratings yet</div>
+                    </div>
                     <button class="compare-prices-btn" onclick="togglePrices('mre-lite')">Compare Prices</button>
                     
                     <div id="mre-lite-retailers" class="retailer-list">
@@ -159,6 +191,16 @@
                         <li>Premium Quality Formula</li>
                         <li>Sport Certified</li>
                     </ul>
+                    <div class="rating-container">
+                        <div class="product-stars" id="stars-podium-protein">
+                            <span class="product-star" onclick="rateProduct('podium-protein', 1)">★</span>
+                            <span class="product-star" onclick="rateProduct('podium-protein', 2)">★</span>
+                            <span class="product-star" onclick="rateProduct('podium-protein', 3)">★</span>
+                            <span class="product-star" onclick="rateProduct('podium-protein', 4)">★</span>
+                            <span class="product-star" onclick="rateProduct('podium-protein', 5)">★</span>
+                        </div>
+                        <div id="rating-display-podium-protein">No ratings yet</div>
+                    </div>
                     <button class="compare-prices-btn" onclick="togglePrices('podium-protein')">Compare Prices</button>
                     
                     <div id="podium-protein-retailers" class="retailer-list">
@@ -199,6 +241,16 @@
                         <li>MCTs Added</li>
                         <li>Limited Edition Flavor</li>
                     </ul>
+                    <div class="rating-container">
+                        <div class="product-stars" id="stars-ryse-protein">
+                            <span class="product-star" onclick="rateProduct('ryse-protein', 1)">★</span>
+                            <span class="product-star" onclick="rateProduct('ryse-protein', 2)">★</span>
+                            <span class="product-star" onclick="rateProduct('ryse-protein', 3)">★</span>
+                            <span class="product-star" onclick="rateProduct('ryse-protein', 4)">★</span>
+                            <span class="product-star" onclick="rateProduct('ryse-protein', 5)">★</span>
+                        </div>
+                        <div id="rating-display-ryse-protein">No ratings yet</div>
+                    </div>
                     <button class="compare-prices-btn" onclick="togglePrices('ryse-protein')">Compare Prices</button>
                     
                     <div id="ryse-protein-retailers" class="retailer-list">
@@ -239,6 +291,16 @@
                         <li>130 Calories Per Serving</li>
                         <li>Natural & Artificially Flavored</li>
                     </ul>
+                    <div class="rating-container">
+                        <div class="product-stars" id="stars-ghost-protein">
+                            <span class="product-star" onclick="rateProduct('ghost-protein', 1)">★</span>
+                            <span class="product-star" onclick="rateProduct('ghost-protein', 2)">★</span>
+                            <span class="product-star" onclick="rateProduct('ghost-protein', 3)">★</span>
+                            <span class="product-star" onclick="rateProduct('ghost-protein', 4)">★</span>
+                            <span class="product-star" onclick="rateProduct('ghost-protein', 5)">★</span>
+                        </div>
+                        <div id="rating-display-ghost-protein">No ratings yet</div>
+                    </div>
                     <button class="compare-prices-btn" onclick="togglePrices('ghost-protein')">Compare Prices</button>
                     
                     <div id="ghost-protein-retailers" class="retailer-list">
