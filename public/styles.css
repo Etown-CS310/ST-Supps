@@ -96,6 +96,7 @@ body.dark-mode footer {
 
 body.dark-mode .hero {
     background-color: #1a1a1a;
+    color: white;
 }
 
 #dark-mode-toggle {
@@ -172,7 +173,7 @@ body.dark-mode .hero {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: black;
     text-align: center;
 }
 
