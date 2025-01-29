@@ -112,3 +112,16 @@
     transform: translateY(-5px);
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
+
+.dosage {
+    color: #2980b9;
+    font-weight: bold;
+}
+.benefits {
+    margin-top: 10px;
+}
+.warning {
+    color: #e74c3c;
+    margin-top: 10px;
+    font-style: italic;
+}
