@@ -20,6 +20,7 @@
                 <li><a href="#contact">Contact</a></li>
                 <button id="dark-mode-toggle">🌙 Dark Mode</button>
             </ul>
+            <p id="user-display"></p>
             <a href="login.html" class="btn">Login</a>
         </nav>
     </header>
@@ -34,67 +35,84 @@
                 <label for="pwd">Password:</label>
                 <input type="password" id="pwd" name="pwd" required>
             </div>
-            <button type="button" class="btn" onclick="registerUser()">Register</button>
-            <button type="button" class="btn" onclick="loginUser()">Login</button>
+            <button type="submit" class="btn">Login</button>
+            <button type="button" class="btn" id="registerBtn">Register</button>
+            <p id="loginMessage"></p>
         </form>
     </div>
 
     <script>
-        // Function for user registration
-        async function registerUser() {
+        document.getElementById("loginForm").addEventListener("submit", async function(event) {
+            event.preventDefault(); // Prevent page reload
+            
             const uname = document.getElementById("uname").value;
             const password = document.getElementById("pwd").value;
-
-            try {
-                const response = await fetch("/register", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify({ uname, password })
-                });
-
-                const result = await response.json();
-
-                if (response.ok) {
-                    alert("Registration successful! You can now log in.");
-                } else {
-                    alert(result.message || "Registration failed.");
-                }
-            } catch (error) {
-                console.error("Error:", error);
-                alert("An error occurred during registration.");
-            }
-        }
-
-        // Function for user login
-        async function loginUser() {
-            const uname = document.getElementById("uname").value;
-            const password = document.getElementById("pwd").value;
-
+            const loginMessage = document.getElementById("loginMessage");
+    
+            loginMessage.textContent = "Logging in...";
+            
             try {
                 const response = await fetch("/login", {
                     method: "POST",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
+                    headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ uname, password })
                 });
-
+    
                 const result = await response.json();
-
+                
                 if (response.ok) {
-                    alert("Login successful!");
-                    window.location.href = result.redirectUrl; // Redirect to the user area or homepage
+                    localStorage.setItem("loggedInUser", uname); // Store username in localStorage
+                    loginMessage.textContent = "Login successful! Redirecting...";
+                    setTimeout(() => window.location.href = result.redirectUrl, 1500);
                 } else {
-                    alert(result.message || "Login failed.");
+                    loginMessage.textContent = result.message || "Login failed.";
                 }
             } catch (error) {
                 console.error("Error:", error);
-                alert("An error occurred during login.");
+                loginMessage.textContent = "An error occurred during login.";
             }
-        }
+        });
+    
+        document.getElementById("registerBtn").addEventListener("click", async function() {
+            const uname = document.getElementById("uname").value;
+            const password = document.getElementById("pwd").value;
+            const loginMessage = document.getElementById("loginMessage");
+    
+            if (!uname || !password) {
+                loginMessage.textContent = "Please fill in all fields.";
+                return;
+            }
+    
+            loginMessage.textContent = "Registering...";
+            
+            try {
+                const response = await fetch("/register", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ uname, password })
+                });
+    
+                const result = await response.json();
+    
+                if (response.ok) {
+                    loginMessage.textContent = "Registration successful! You can now log in.";
+                } else {
+                    loginMessage.textContent = result.message || "Registration failed.";
+                }
+            } catch (error) {
+                console.error("Error:", error);
+                loginMessage.textContent = "An error occurred during registration.";
+            }
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const user = localStorage.getItem("loggedInUser");
+            if (user) {
+                document.getElementById("user-display").textContent = `Logged in: ${user}`;
+            }
+        });
     </script>
+    
 
     <footer>
         <p>&copy; 2024 ST-Supps. All rights reserved.</p>

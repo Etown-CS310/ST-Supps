@@ -24,6 +24,7 @@
                 <li><a href="#contact">Contact</a></li>
                 <button id="dark-mode-toggle">🌙 Dark Mode</button>
             </ul>
+            <p id="user-display"></p>
             <a href="login.html" class="btn">Login</a>
         </nav>
     </header>
@@ -340,6 +341,13 @@
                 const button = event.target;
                 button.textContent = retailerList.classList.contains('show') ? 'Hide Prices' : 'Compare Prices';
             }
+            
+            document.addEventListener("DOMContentLoaded", function () {
+            const user = localStorage.getItem("loggedInUser");
+            if (user) {
+                document.getElementById("user-display").textContent = `Logged in: ${user}`;
+            }
+            });
         </script>
 
 
